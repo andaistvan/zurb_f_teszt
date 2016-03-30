@@ -1,0 +1,32 @@
+<root>
+    <params name="filter" label="Filter">
+        <param type="group" label="Filter">
+            <param name="categories" label="Category" type="eventsmanagercategories" default="0" multiple="1"
+                   size="10"/>
+            <param name="tags" label="Tags" type="eventsmanagertags" default="0" multiple="1" size="10"/>
+            <param name="locations" label="Location" type="eventsmanagerlocations" default="0" multiple="1"
+                   size="10"/>
+        </param>
+        <param type="group" label="Limit">
+            <param name="started" label="Started" type="filter" default="0"/>
+            <param name="ended" label="Ended" type="filter" default="-1"/>
+        </param>
+    </params>
+    <params name="order" label="Order by">
+        <param name="order" type="mixed" label="Order" default="_event_start_date|*|asc">
+            <param type="list" label="Field" translateable="1">
+                <option value="_event_start_date">Event start date</option>
+                <option value="_event_end_date">Event end date</option>
+                <option value="_event_rsvp_date">Event rsvp date</option>
+                <option value="_event_date_created">Event creation date</option>
+                <option value="_event_date_modified">Event modification date</option>
+                <option value="_ticket_price">Ticket price</option>
+                <option value="title">Title</option>
+            </param>
+            <param type="radio" label="order" translateable="1">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>
